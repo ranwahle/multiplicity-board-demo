@@ -1,0 +1,3 @@
+
+<span *ngIf="!shouldIGuess" [ngClass]="{'guessed' : guessed}">{{row * col}}</span>
+<span *ngIf="shouldIGuess"><input type="number" [(ngModel)]="guess" (change)="onChange()"/> </span>

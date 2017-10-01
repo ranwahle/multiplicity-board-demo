@@ -1,0 +1,15 @@
+<div *ngIf="rows">
+  <!--first row -->
+  <div class="row">
+    <div class="cell">1</div>
+    <div class="cell" *ngFor="let col of cols, let colIndex = index">{{colIndex + 2}}</div>
+
+  </div>
+ <div *ngFor="let row of rows, let index = index " class="row">
+   <div class="cell"> {{index + 2}}</div>
+
+   <div class="cell" *ngFor="let col of cols, let colIndex = index">
+     <app-multiply-cell [col]="colIndex + 2" [row]="index + 2"></app-multiply-cell>
+   </div>
+ </div>
+</div>
